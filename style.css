@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    height: 15vh;
+    padding: .5em;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#gridContainer{
+    height: 45vh;
+    width: 45vw;
+    left: 50%;
+    margin-top: 10vh;
+    display: grid;
+    grid-auto-rows: 20px;
+    grid-template-columns: repeat(rows/2, 20px);
+
+}
