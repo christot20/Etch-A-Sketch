@@ -9,7 +9,16 @@ document.documentElement.style
 //grid num x gridnum
 for(let i = 0; i < gridNum*gridNum; i++){
     console.log(gridNum, i)
-    gridDiv = document.createElement('div');
-    gridDiv.textContent = "Hi";
-    container.appendChild(gridDiv);    
+    let gridDiv = document.createElement('div');
+    gridDiv.classList.add("cell");
+    container.appendChild(gridDiv);  
+    gridDiv.addEventListener("mouseover", hover);  
 }
+
+function hover(e){
+    if (e.target.outerHTML === "<div class=\"cell\"></div>"){
+        console.log(e);
+        e.target.style.background = "red";
+    }
+}
+
