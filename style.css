@@ -1,6 +1,7 @@
 :root{
     --rowNum: 0;
     --columnNum: 0;
+    --gridColor: black;
 }
 *{
     margin:0;
@@ -20,16 +21,26 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: aqua;
 }
 #sideButtons{
     display: flex;
     flex-direction: row;
     padding: 1.5em;
     gap: 2em;
+    align-items: center;
+}
+#sideButtons input{
+    width: 6vw;
+    height: 7vh;
 }
 #sideButtons button{
     padding: 1em;
     width: 6vw;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #gridContainer{
     height: 65vh;
@@ -38,8 +49,10 @@ body{
     grid-template-rows: repeat(var(--rowNum), 1fr);
     grid-template-columns: repeat(var(--columnNum), 1fr);
     background-color: #fff;
+    border: 5px solid blue;
 }
 .cell{
     box-sizing: border-box;
     border: 1px solid rgb(0, 0, 0);
+    background-color: #fff;
 }
