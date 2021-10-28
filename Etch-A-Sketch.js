@@ -40,11 +40,18 @@ function hover(e){
     }
     function clear(){ //clears the grid
         e.target.style.background = "white";
-        }
+    }
+    function eraser(e){ //toggles eraser
+        console.log(e);
+        document.getElementById("colorPicker").value = "#FFFFFF";
+        console.log(document.getElementById("colorPicker").value);
+    }
     document.getElementById("clear").addEventListener("click",clear);
+    document.getElementById("erase").addEventListener("click", eraser);
 }
 
-//const erase = document.getElementById("erase");
+// const erase = document.getElementById("erase");
+// erase.addEventListener("click", eraser);
 
 
 //erase.addEventListener("click", hover);
