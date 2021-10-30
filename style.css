@@ -1,3 +1,4 @@
+@font-face { font-family: Arcade; src: url('dpcomic.ttf'); } 
 :root{
     --rowNum: 0;
     --columnNum: 0;
@@ -11,16 +12,32 @@ header{
     flex-direction: column;
     gap: 2vh;
     height: 10vh;
-    padding: .5em;
+    padding: .1em;
     justify-content: center;
     align-items: center;
+    font-size: 1.5em;
 }
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: aqua;
+    background-color: rgb(243, 26, 26);
+    font-family: Arcade;
+}
+.rangeslider{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: .2em;
+}
+#colorDiv{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: 1em;
 }
 #sideButtons{
     display: flex;
@@ -29,18 +46,68 @@ body{
     gap: 2em;
     align-items: center;
 }
-#sideButtons input{
-    width: 7em;
-    height: 4em;
+#colorDiv span{
+    font-size: 1.6em;
+}
+.rangeslider span{
+    font-size: 1.6em;
+}
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 2.7em;
+	height: 2.7em;
+    background: none;
+}
+input[type="color"]:hover, .side:hover{
+    cursor: pointer;
+}
+input[type=color]::-webkit-color-swatch {
+    border: solid 1px rgb(141, 141, 141);
+    border-radius: 50%;
+    padding: 0;
+}
+  
+input[type=color]::-webkit-color-swatch-wrapper {
+    border: solid 1px rgb(141, 141, 141);
+    border-radius: 50%;
+    padding: 0;
 }
 #sideButtons button{
     padding: 1em;
-    width: 7em;
-    height: 4em;
+    width: 4.5em;
+    height: 4.5em;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    font-size: .8em;
+    border: 3px solid #000;
+    font-family: Arcade;
 }
+#sideButtons button:active {     
+    transform: translateY(2px);
+    background-color: rgb(255, 0, 0);
+}
+#colorDiv input:hover{
+    transform: scale(1.1)
+}
+#colorDiv input:active{
+    transform: translateY(2px);
+}
+.side{
+    opacity: 1;
+    background-color: #fff;
+}
+.side:hover{
+    background-color: rgb(0, 255, 13);
+    transform: scale(1.1);
+    opacity: 1;
+}
+/*.side:focus{
+    background-color: rgb(8, 248, 196);
+    opacity: 1;
+}*/
 #gridContainer{
     height: 70vh;
     width: 600px;
@@ -48,11 +115,47 @@ body{
     grid-template-rows: repeat(var(--rowNum), 1fr);
     grid-template-columns: repeat(var(--columnNum), 1fr);
     background-color: #fff;
-    border: 6px solid rgb(253, 16, 155);
-    border-radius: 2%;
+    border-radius: 1%;
+    box-shadow: -0em 0em .5em .5em rgba(0, 0, 0, .75);
 }
 .cell{
     box-sizing: border-box;
-    border: 1.5px solid rgb(0, 0, 0);
+    border: none;
     background-color: #fff;
 }
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #ffffff;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 24px;
+    width: 12px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10px;
+    background-color: rgb(141, 141, 141);
+  }
+  input[type=range]::-webkit-slider-thumb:active {
+      background-color: rgb(194, 194, 194);
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ffffff;
+  }
+  
