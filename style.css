@@ -15,14 +15,17 @@ header{
     padding: .1em;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 2vw;
+    font-weight: none;
 }
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(243, 26, 26);
+    background: linear-gradient(135deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
     font-family: Arcade;
 }
 .rangeslider{
@@ -47,29 +50,29 @@ body{
     align-items: center;
 }
 #colorDiv span{
-    font-size: 1.6em;
+    font-size: 1.7em;
 }
 .rangeslider span{
-    font-size: 1.6em;
+    font-size: 1.7em;
 }
 input[type="color"] {
 	-webkit-appearance: none;
 	border: none;
-	width: 2.7em;
-	height: 2.7em;
+	width: 4.5em;
+	height: 4.5em;
     background: none;
 }
 input[type="color"]:hover, .side:hover{
     cursor: pointer;
 }
 input[type=color]::-webkit-color-swatch {
-    border: solid 1px rgb(141, 141, 141);
+    border: solid 1.5px rgb(255, 255, 255);
     border-radius: 50%;
     padding: 0;
 }
   
 input[type=color]::-webkit-color-swatch-wrapper {
-    border: solid 1px rgb(141, 141, 141);
+    border: solid 2px rgb(255, 255, 255);
     border-radius: 50%;
     padding: 0;
 }
@@ -81,13 +84,25 @@ input[type=color]::-webkit-color-swatch-wrapper {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: .8em;
+    font-size: 1em;
     border: 3px solid #000;
     font-family: Arcade;
 }
+.side:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+#erase:hover{
+    background-color: rgb(248, 107, 154);
+}
+#clear:hover{
+    background-color: rgb(252, 57, 57);
+}
+#RGB:hover{
+    background: linear-gradient(180deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+}
 #sideButtons button:active {     
     transform: translateY(2px);
-    background-color: rgb(255, 0, 0);
 }
 #colorDiv input:hover{
     transform: scale(1.1)
@@ -99,18 +114,13 @@ input[type=color]::-webkit-color-swatch-wrapper {
     opacity: 1;
     background-color: #fff;
 }
-.side:hover{
-    background-color: rgb(0, 255, 13);
-    transform: scale(1.1);
-    opacity: 1;
-}
 /*.side:focus{
     background-color: rgb(8, 248, 196);
     opacity: 1;
 }*/
 #gridContainer{
     height: 70vh;
-    width: 600px;
+    width: 45vw;
     display: grid;
     grid-template-rows: repeat(var(--rowNum), 1fr);
     grid-template-columns: repeat(var(--columnNum), 1fr);
@@ -150,10 +160,10 @@ input[type=range] {
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -10px;
-    background-color: rgb(141, 141, 141);
+    background-color: rgb(255, 0, 0); /* add comments to code and write README.md and check if it looks nice on other computer and add colorful background*/
   }
   input[type=range]::-webkit-slider-thumb:active {
-      background-color: rgb(194, 194, 194);
+      background-color: rgb(18, 207, 11);
   }
   input[type=range]:focus::-webkit-slider-runnable-track {
     background: #ffffff;
