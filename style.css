@@ -23,10 +23,21 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(135deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
+    background: linear-gradient(125deg, #fd8800, #fd0000, #fd008f, #9700fd, #003dfd, #05c7e6, #26ca3c ,#4bd58d);
+    background-size: 1800% 1800%;
+    -webkit-animation: 30s infinite normal rainbow;
+    animation: 30s infinite normal rainbow;
     font-family: Arcade;
+}
+@-webkit-keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+@keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
 }
 .rangeslider{
     display: flex;
