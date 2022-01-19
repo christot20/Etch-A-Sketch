@@ -6,7 +6,7 @@ be able to erase/clear the grid, and use the mouse to draw on the
 grid.
 
 1. Use of Javascript and conditional statements.
-2. Use of DOM manipulation for changing colors of grid/button functionality.S
+2. Use of DOM manipulation for changing colors of grid/button functionality.
 3. Dedicated functions for each button/mode user is in.
 4. Customizability with simple interface and design.
 5. Use of Git for version control.
