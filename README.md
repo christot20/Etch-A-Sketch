@@ -10,12 +10,12 @@ grid.
 3. Dedicated functions for each button/mode user is in.
 4. Customizability with simple interface and design.
 5. Use of Git for version control.
-6. Use of HTML/CSS for styling and structure.S
+6. Use of HTML/CSS for styling and structure.
 
 
 What I learned:
 1. Advanced Javascript DOM manipulation functions/tactics.
-2. Functions being used for storing code in organized blocks.S
+2. Functions being used for storing code in organized blocks.
 3. How to loop in Javascript and create elements into HTML page.
 4. How to use version control to save work that will need to be changed later.
 5. JS DOM Manipulation and use of HTML, CSS, and JS in one project together
